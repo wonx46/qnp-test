@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "5459f6fc-7edb-42ac-ae21-e24471b5c349",
+		"name": "QNP Iwan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1184625"
+	},
+	"item": [
+		{
+			"name": "create contact",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"name\":\"iwan\",\n\"email\":\"abdurahman.iwan@gmail.com\",\n\"phone\":\"081902512555\",\n\"address\":\"Bandung\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9999/v1/contact/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9999",
+					"path": [
+						"v1",
+						"contact",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete contact",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"id\":\"1710340232056\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9999/v1/contact/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9999",
+					"path": [
+						"v1",
+						"contact",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit contact",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"id\":\"1710340232056\",\n\"name\":\"iwan abdur\",\n\"email\":\"abdurahman.iwan@gmail.com\",\n\"phone\":\"081902512555\",\n\"address\":\"Bandung\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9999/v1/contact/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9999",
+					"path": [
+						"v1",
+						"contact",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Contact List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9999/v1/contact/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9999",
+					"path": [
+						"v1",
+						"contact",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Json Fetch",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpd2FuLXRlc3QiLCJleHAiOjE3MTAzNjQyNTAsImlhdCI6MTcxMDM0NjI1MH0.aOFWig5FbcE2LhcpbgZFuICjUNsW6eDmOXr6z9iLJgAdSQtg5luEEG7005mcq5wQ1-Onn77WScJw-UD18c065g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9999/v1/jsonplaceholder/fetch",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9999",
+					"path": [
+						"v1",
+						"jsonplaceholder",
+						"fetch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"iwan-test\",\n    \"password\":\"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9999/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9999",
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
